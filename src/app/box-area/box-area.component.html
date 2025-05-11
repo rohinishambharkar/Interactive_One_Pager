@@ -1,1 +1,18 @@
-<p>box-area works!</p>
+<div class="boxes">
+  <div
+    *ngFor="let b of boxes"
+    class="box"
+    [class.active]="circleLocation === b"
+    (dragover)="allowDrop($event)"
+    (drop)="onDrop($event, b)"
+  >
+    <app-draggable-circle
+      *ngIf="circleLocation === b"
+      [text]="circleText"
+      [isDragging]="isDragging"
+      (dragStart)="onDragStart($event)"
+      (dragEnd)="onDragEnd($event)"
+      (textUpdated)="updateText($event)"
+    ></app-draggable-circle>
+  </div>
+</div>

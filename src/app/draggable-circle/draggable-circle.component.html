@@ -1,1 +1,9 @@
-<p>draggable-circle works!</p>
+<div
+  class="circle"
+  contenteditable="true"
+  [innerText]="text"
+  draggable="true"
+  (dragstart)="onDragStart($event)"
+  (dragend)="onDragEnd($event)"
+  (blur)="onBlur($event)"
+></div>
