@@ -1,1 +1,26 @@
-<p>timeline works!</p>
+<!-- Input Form Box -->
+<div class="mb-4 p-4 border rounded bg-gray-50 shadow flex flex-col md:flex-row gap-4 items-start md:items-center m-5">
+  <input type="date" [(ngModel)]="selectedDate" class="form-control" />
+  <input type="text" [(ngModel)]="note" placeholder="Enter note" class="form-control" />
+  <input type="text" [(ngModel)]="imageUrl" placeholder="Image URL (optional)" class="form-control" />
+  <button class="btn btn-primary" (click)="addEntry()">Add/Update</button>
+  <button class="btn btn-secondary" (click)="scrollToDate(selectedDate)">Go to Date</button>
+</div>
+
+<div
+  *ngFor="let entry of entries"
+  class="timeline-entry p-4 border rounded min-w-[250px] flex-shrink-0 text-center bg-white shadow m-5"
+  [id]="'entry-' + entry.date"
+>
+  <strong>{{ entry.date }}</strong>
+
+  <!-- Note box -->
+  <div class="note-box">
+  {{ entry.note }}
+  </div>
+
+  <!-- Image -->
+  <img *ngIf="entry.imageUrl" [src]="entry.imageUrl" alt="Note Image"
+       class="mt-2 w-32 h-32 object-cover mx-auto rounded" />
+</div>
+

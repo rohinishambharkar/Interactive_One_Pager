@@ -1,0 +1,36 @@
+.timeline-container {
+  scroll-behavior: smooth;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.timeline-entry {
+  transition: transform 0.3s ease;
+}
+/* .timeline-entry:hover {
+  transform: scale(1.05);
+} */
+.form-control {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.note-box {
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
