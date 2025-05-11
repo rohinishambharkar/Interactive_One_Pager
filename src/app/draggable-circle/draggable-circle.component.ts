@@ -1,7 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-draggable-circle',
+  imports: [CommonModule, FormsModule],
   templateUrl: './draggable-circle.component.html',
   styleUrls: ['./draggable-circle.component.css']
 })

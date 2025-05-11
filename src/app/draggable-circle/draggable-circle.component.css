@@ -1,23 +1,29 @@
 .circle {
-  width: 4rem;
-  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
   border-radius: 50%;
   background-color: #3b82f6;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: grab;
   user-select: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.circle:focus {
-  outline: none;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  min-width: 4rem;
+  min-height: 4rem;
+  max-width: 20rem; /* prevent excessive growth */
+  max-height: 20rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .circle.dragging {
   opacity: 0.6;
-  transform: scale(1.1);
+  transform: scale(1.2);
   cursor: grabbing;
+}
+
+.circle:focus {
+  outline: none;
 }

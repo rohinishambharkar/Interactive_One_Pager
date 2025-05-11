@@ -6,13 +6,17 @@
 }
 
 .box {
-  width: 12rem;
-  height: 12rem;
+  padding: 2rem;
   border: 2px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  min-width: 8rem;
+  min-height: 8rem;
+  max-width: 22rem;
+  max-height: 22rem;
+  flex-wrap: wrap;
 }
 
 .box.active {
