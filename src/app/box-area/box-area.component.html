@@ -1,22 +1,30 @@
-<h1 class="d-flex justify-content-center p-5 text-[#5e503f] text-3xl font-bold">Drag and Drop</h1>
-<div class="d-flex justify-content-center p-1 text-[#7c6f57]">
-  <p>Drag and drop the circle from one box to another</p>
-</div>
-<div class="boxes">
-  <div
-    *ngFor="let b of boxes"
-    class="box"
-    [class.active]="circleLocation === b"
-    (dragover)="allowDrop($event)"
-    (drop)="onDrop($event, b)"
-  >
-    <app-draggable-circle
-      *ngIf="circleLocation === b"
-      [text]="circleText"
-      [isDragging]="isDragging"
-      (dragStart)="onDragStart($event)"
-      (dragEnd)="onDragEnd($event)"
-      (textUpdated)="updateText($event)"
-    ></app-draggable-circle>
+<div class="drag-container">
+
+  <h1 class="d-flex justify-content-center p-3 text-[#5e503f] text-3xl font-bold">
+    Drag and Drop
+  </h1>
+
+  <div class="d-flex justify-content-center p-1 text-[#7c6f57]">
+    <p>Drag and drop the circle from one box to another</p>
   </div>
+
+  <div class="boxes">
+    <div
+      *ngFor="let b of boxes"
+      class="box"
+      [class.active]="circleLocation === b"
+      (dragover)="allowDrop($event)"
+      (drop)="onDrop($event, b)"
+    >
+      <app-draggable-circle
+        *ngIf="circleLocation === b"
+        [text]="circleText"
+        [isDragging]="isDragging"
+        (dragStart)="onDragStart($event)"
+        (dragEnd)="onDragEnd($event)"
+        (textUpdated)="updateText($event)"
+      ></app-draggable-circle>
+    </div>
+  </div>
+
 </div>

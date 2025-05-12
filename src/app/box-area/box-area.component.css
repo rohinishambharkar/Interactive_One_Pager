@@ -12,8 +12,8 @@ body {
 
 .box {
   padding: 2rem;
-  border: 2px solid #d9caa3;           /* tan border */
-  background-color: #fffaf0;           /* light beige */
+  border: 2px solid #d9caa3;           
+  background-color: #fffaf0;         
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,20 +23,19 @@ body {
   max-width: 22rem;
   max-height: 22rem;
   border-radius: 12px;
-  box-shadow: 2px 2px 6px rgba(96, 75, 37, 0.15); /* soft brown shadow */
+  box-shadow: 2px 2px 6px rgba(96, 75, 37, 0.15); 
 }
 
 .box.active {
-  background-color: #f7efe5; /* light brown highlight */
+  background-color: #f7efe5; 
   border-color: #b89b6b;
 }
 
-/* Optional: circle styling if you want it in theme too */
 .circle {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background-color: #a1866f;  /* muted brown */
+  background-color: #a1866f; 
   color: white;
   display: flex;
   align-items: center;
@@ -54,4 +53,14 @@ body {
   opacity: 0.7;
   transform: scale(1.1);
   cursor: grabbing;
+}
+
+.drag-container {
+  border: 2px solid #cbb69d;
+  border-radius: 8px;
+  background-color: #fdfcf5;
+  padding: 2rem;
+  max-width: 650px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(96, 75, 37, 0.1);
 }

@@ -1,11 +1,11 @@
-/* Beige theme background and consistent look */
+
 body {
   background-color: #f5f5dc;
 }
 
 .timeline-container {
   scroll-behavior: smooth;
-  background-color: #fdfcf5; /* slightly lighter beige */
+  background-color: #fdfcf5; 
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #d9caa3;
@@ -13,7 +13,7 @@ body {
 
 .timeline-entry {
   transition: transform 0.3s ease;
-  background-color: #fffaf0; /* light beige/tan card */
+  background-color: #fffaf0; 
   border: 1px solid #d9caa3;
 }
 
@@ -22,7 +22,7 @@ body {
   margin: 0.2rem;
   border-radius: 4px;
   border: 1px solid #c8b37f;
-  background-color: #fffaf0; /* light beige for inputs */
+  background-color: #fffaf0; 
   color: #333;
 }
 
