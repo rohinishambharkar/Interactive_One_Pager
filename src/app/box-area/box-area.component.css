@@ -1,3 +1,8 @@
+body {
+  background-color: #f5f5dc; /* beige base */
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .boxes {
   display: flex;
   gap: 1.5rem;
@@ -7,18 +12,46 @@
 
 .box {
   padding: 2rem;
-  border: 2px solid #ccc;
+  border: 2px solid #d9caa3;           /* tan border */
+  background-color: #fffaf0;           /* light beige */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   min-width: 8rem;
   min-height: 8rem;
   max-width: 22rem;
   max-height: 22rem;
-  flex-wrap: wrap;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(96, 75, 37, 0.15); /* soft brown shadow */
 }
 
 .box.active {
-  background-color: #f0f8ff;
+  background-color: #f7efe5; /* light brown highlight */
+  border-color: #b89b6b;
+}
+
+/* Optional: circle styling if you want it in theme too */
+.circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #a1866f;  /* muted brown */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.circle:focus {
+  outline: none;
+}
+
+.circle.dragging {
+  opacity: 0.7;
+  transform: scale(1.1);
+  cursor: grabbing;
 }
