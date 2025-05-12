@@ -1,59 +1,49 @@
-# InteractiveOnePager
+# 🧩 Angular Interactive One-Pager – Drag & Drop + Timeline
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+This project is a single-page Angular application that features:
 
-## Development server
+1. **Drag and Drop Boxes**  
+   - A draggable, editable circle that can be moved between boxes.
+   - Smooth animation and responsive UI with a warm beige-brown theme.
 
-To start a local development server, run:
+2. **Scrollable Timeline**  
+   - A horizontally scrollable calendar-based timeline.
+   - Allows users to add notes and images to specific dates.
+   - Supports jumping to a specific date and persists data using local storage.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Features
 
-## Code scaffolding
+### Section 1: Drag and Drop
+- Three boxes styled in a beige-brown theme.
+- A draggable circle with editable text.
+- Smooth animation and auto-centering when dropped.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Section 2: Timeline
+- Horizontal scrollable timeline with date-based entries.
+- Users can add notes and optional images.
+- View Notes toggle button.
+- Data saved in `localStorage` for persistence.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠 Requirements
 
-```bash
-ng generate --help
-```
+Make sure you have the following installed on your system:
 
-## Building
+- [Node.js](https://nodejs.org/en/) (v16 or higher recommended)
+- [Angular CLI](https://angular.io/cli) (v15+ recommended)
+  ```bash
+  npm install -g @angular/cli
 
-To build the project run:
+# Installation
 
-```bash
-ng build
-```
+# Clone the repository:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- [git clone https://github.com/your-username/angular-drag-timeline.git](https://github.com/rohinishambharkar/Interactive_One_Pager.git)
+- cd angular-drag-timeline
 
-## Running unit tests
+- npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- ng serve
