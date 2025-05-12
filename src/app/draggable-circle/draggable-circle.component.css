@@ -4,26 +4,41 @@
   justify-content: center;
   padding: 1rem;
   border-radius: 50%;
-  background-color: #3b82f6;
-  color: white;
+  background-color: #a1866f;         /* warm brown */
+  color: #fffaf0;                    /* ivory text */
   cursor: grab;
   user-select: none;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
   min-width: 4rem;
   min-height: 4rem;
-  max-width: 20rem; /* prevent excessive growth */
+  max-width: 20rem;
   max-height: 20rem;
   font-size: 1rem;
   text-align: center;
+  box-shadow: 2px 2px 5px rgba(96, 75, 37, 0.2); /* subtle shadow */
+  border: 2px solid #cbb69d;         /* tan border */
 }
 
 .circle.dragging {
-  opacity: 0.6;
+  opacity: 0.7;
   transform: scale(1.2);
   cursor: grabbing;
+  background-color: #8c735a;         /* slightly darker brown while dragging */
+  box-shadow: 4px 4px 8px rgba(96, 75, 37, 0.3);
 }
 
 .circle:focus {
   outline: none;
+  border-color: #b89b6b;             /* focus border color */
+  background-color: #a98c72;
+}
+.circle.dragging {
+  animation: pop 0.2s ease-in-out;
+}
+
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1.1); }
 }
