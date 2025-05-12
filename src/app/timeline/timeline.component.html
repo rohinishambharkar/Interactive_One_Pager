@@ -1,8 +1,8 @@
 <!-- Timeline Wrapper (Limited Width + Centered) -->
-<div class="max-w-screen-lg mx-auto p-5">
+<div class="max-w-screen-lg mx-auto p-5"><div class="max-w-screen-lg mx-auto p-5 bg-[#f5f5dc] min-h-screen rounded shadow">
 
+    <h1 class="text-2xl font-semibold text-center text-[#5e503f] pb-2">Add Notes</h1>
 
-    <h1 class="d-flex justify-content-center pb-2"> Add Notes</h1>
   <!-- Input Form Box -->
   <div class="mb-4 p-4 border rounded bg-gray-50 shadow flex flex-col md:flex-row gap-4 items-start md:items-center">
     <input type="date" [(ngModel)]="selectedDate" class="form-control" />
@@ -26,13 +26,14 @@
   *ngIf="showNotes"
   class="timeline-container overflow-x-auto whitespace-nowrap flex gap-4 py-4 px-5 border-t"
 >
-<h1 class="d-flex justify-content-center">Notes</h1>
+<h1 class="text-2xl font-semibold text-center text-[#5e503f] pb-4">Notes</h1>
+
   <div
     *ngFor="let entry of entries"
     class="timeline-entry flex flex-col items-center p-4 border rounded min-w-[250px] bg-white shadow"
     [id]="'entry-' + entry.date"
   >
-    <strong class="mb-2">{{ entry.date }}</strong>
+    <strong class="mb-2 pb-3">Date: {{ entry.date }}</strong>
     <img *ngIf="entry.imageUrl"
          [src]="entry.imageUrl"
          alt="Note Image"
