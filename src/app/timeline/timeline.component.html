@@ -1,26 +1,47 @@
-<!-- Input Form Box -->
-<div class="mb-4 p-4 border rounded bg-gray-50 shadow flex flex-col md:flex-row gap-4 items-start md:items-center m-5">
-  <input type="date" [(ngModel)]="selectedDate" class="form-control" />
-  <input type="text" [(ngModel)]="note" placeholder="Enter note" class="form-control" />
-  <input type="text" [(ngModel)]="imageUrl" placeholder="Image URL (optional)" class="form-control" />
-  <button class="btn btn-primary" (click)="addEntry()">Add/Update</button>
-  <button class="btn btn-secondary" (click)="scrollToDate(selectedDate)">Go to Date</button>
-</div>
+<!-- Timeline Wrapper (Limited Width + Centered) -->
+<div class="max-w-screen-lg mx-auto p-5">
 
-<div
-  *ngFor="let entry of entries"
-  class="timeline-entry p-4 border rounded min-w-[250px] flex-shrink-0 text-center bg-white shadow m-5"
-  [id]="'entry-' + entry.date"
->
-  <strong>{{ entry.date }}</strong>
 
-  <!-- Note box -->
-  <div class="note-box">
-  {{ entry.note }}
+    <h1 class="d-flex justify-content-center pb-2"> Add Notes</h1>
+  <!-- Input Form Box -->
+  <div class="mb-4 p-4 border rounded bg-gray-50 shadow flex flex-col md:flex-row gap-4 items-start md:items-center">
+    <input type="date" [(ngModel)]="selectedDate" class="form-control" />
+    <input type="text" [(ngModel)]="note" placeholder="Enter note" class="form-control" />
+    <input type="text" [(ngModel)]="imageUrl" placeholder="Image URL (optional)" class="form-control" />
+    <button class="btn btn-primary" (click)="addEntry()">Add/Update</button>
+    <!-- <button class="btn btn-secondary" (click)="scrollToDate(selectedDate)">Go to Date</button> -->
   </div>
 
-  <!-- Image -->
-  <img *ngIf="entry.imageUrl" [src]="entry.imageUrl" alt="Note Image"
-       class="mt-2 w-32 h-32 object-cover mx-auto rounded" />
+
+<!-- Button to Show Notes -->
+<div class="text-center mb-4">
+  <button class="btn btn-primary" (click)="toggleNotesVisibility()" *ngIf="!showNotes">
+    View Notes
+  </button>
 </div>
 
+<!-- Scrollable Timeline Container -->
+<div
+  #timelineContainer
+  *ngIf="showNotes"
+  class="timeline-container overflow-x-auto whitespace-nowrap flex gap-4 py-4 px-5 border-t"
+>
+<h1 class="d-flex justify-content-center">Notes</h1>
+  <div
+    *ngFor="let entry of entries"
+    class="timeline-entry flex flex-col items-center p-4 border rounded min-w-[250px] bg-white shadow"
+    [id]="'entry-' + entry.date"
+  >
+    <strong class="mb-2">{{ entry.date }}</strong>
+    <img *ngIf="entry.imageUrl"
+         [src]="entry.imageUrl"
+         alt="Note Image"
+         class="w-32 h-32 object-cover rounded mb-2" />
+    <div class="note-box w-full text-sm">
+      {{ entry.note }}
+    </div>
+  </div>
+</div>
+
+
+</div>
